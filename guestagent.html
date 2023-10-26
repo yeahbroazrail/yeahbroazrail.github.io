@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name ="description" content="Site de présentation du jeu Valorant">
+    <title>Valorant</title>
+    <link rel="stylesheet" type="text/css" href="guestagent.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="guestagent.js" defer></script>
+</head>
+
+<body>
+  <header>
+      <nav class="navbar">
+          <img src="logo.webp" alt="logodevalo" class="logodevalo">
+          <div class="nav-links">
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="menuquiz.html">Quiz</a></li>
+                  <li><a href="https://support-valorant.riotgames.com/hc/fr/">Support</a></li>
+              </ul>
+          </div>
+          <img src="menu.webp" alt="Bouton menu" class="menu-hamburger">
+      </nav>
+  </header>
+  <div class="enteter"></div>
+  <div class="ecart"></div>
+
+  <div id="image-container">
+      <img id="image" src="Viper_Artwork_Full.webp" alt="Image à deviner">
+  </div>
+  <div id="reponse-container">
+      <input type="text" id="reponse" placeholder="Tapez votre réponse ici">
+      <button id="verifier" onclick="verifierReponse()">Verifier</button>
+      <div id="resultat"></div>
+      <div class="imgsuiv">
+        <button id="suivant" onclick="imageSuivante()" style="display: none">Image suivante</button>
+      </div>
+  </div>
+  <div id="resultat-final" style="display: none;">
+    <h2>Resultat final</h2>
+    <p>Score : <span id="score-final"></span> <span id="total-images"></span></p>
+    <button id="refreshButton">recommencer le quiz</button>
+</div>
+
+
+  </body>
+  </html>
+  
+
+</body>

@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:'Policevalo';
+    src: url('Valorant\ Font.ttf') format('truetype');
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #30383f;
+}
+
+header {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar {
+    position: absolute;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Policevalo';
+    background-color: #fa4454;
+    
+}
+.navbar .logodevalo{
+    height: 60px;
+}
+.navbar a {
+    color: black;
+    font-size: 24px;
+}
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+.navbar .nav-links ul {
+    display: flex;
+}
+.navbar .nav-links ul li{
+    margin: 0 20px;
+}
+.navbar .menu-hamburger {
+    display: none;
+    margin-right: 20px;
+    height: 40px;
+}
+@media screen and (max-width: 768px) {
+    .navbar .menu-hamburger {
+        display: block;
+        z-index: 3;
+    }
+    .navbar {
+        padding: 0;
+    }
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: #30383f3f;
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5 ease ;
+    }
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+    .navbar .nav-links ul li {
+        margin: 20px 0;
+        font-size: 1.3em;
+    }
+}
+
+
+
+.ImageTete {
+    background-image: url('evolution.webp');
+    background-color: #fa4454; /* Couleur de secours au cas où l'image ne se charge pas */
+    height: 75vh;
+    max-height: 50%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.separator {
+    height: 20px;
+    width: 100%;
+    background-color: #fa4454;
+}
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    background-image: url(backgroundagent.webp);
+}
+.myslider {
+    height: 40%;
+    width: 40%;
+    display: none;
+    overflow: hidden;
+}
+.prev, .next {
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.1s;
+    user-select: none;
+    z-index: 3;
+}
+.prev:hover, .next:hover{
+    color: #fa4454;
+}
+.next {
+    right: 0;
+}
+.dotsbox {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+    cursor: pointer;
+}
+.dot{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.active, .dot:hover {
+    border-color: #fa4454;
+    transform: scale(1.2);
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1,5s;
+    animation-name: fade;
+    animation-duration: 1,5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: -0.8;}
+    to {opacity: 1;}
+}
+@keyframes fade {
+    from {opacity: -0.8;}
+    to {opacity: 1;}
+}
+
+.txt{
+    position: absolute;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 35px;
+    top: 20%;
+    left: 32%;
+    -webkit-animation-name: posi;
+    -webkit-animation-duration: 2s;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 2;
+    margin-right: 100px;
+}
+@-webkit-keyframes posi {
+    from {left: 75%;}
+    to {left: 32%;}
+}
+@keyframes posi {
+    from {left: 75%;}
+    to {left: 32%;}
+}
+
+.txt h1{
+    color: #fff;
+    font-weight: bold;
+    margin: 20px;
+}
+.txt p{
+    font-weight: bold;
+    font-size: 20px;
+}
+@media screen and (max-width: 1280px) {
+    .txt p{
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .txt{
+        position: absolute;
+        color: #fff;
+        letter-spacing: 2px;
+        line-height: 20px;
+        top: 20%;
+        left: 32%;
+        -webkit-animation-name: posi;
+        -webkit-animation-duration: 2s;
+        animation-name: posi;
+        animation-duration: 2s;
+        z-index: 2;
+        margin-right: 100px;
+    }
+    .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    .active, .dot:hover {
+        border-color: #fa4454;
+    }
+}
+@media screen and (max-width: 900px) {
+    .myslider {
+        height: 100%;
+        width: 100%;
+    }
+    .txt {
+        line-height: 15px;
+        font-size: 20px;
+        top: 10%;
+        left: 10%;
+        transform: (-50%, -50%);
+        -webkit-animation-name: posi2;
+        -webkit-animation-duration: 2s;
+        animation-name: posi2;
+        animation-duration: 2s;
+        background: #fa445391;
+        margin-right: 50px;
+    }
+    @-webkit-keyframes posi2 {
+        from {top: 35%;}
+        to {top: 10%;}
+    }
+    @keyframes posi2 {
+        from {top: 35%;}
+        to {top: 10%;}
+    }
+    .txt hl{
+        font-size: 40px;
+    }
+    .txt p{
+        font-size: 13px;
+    }
+    .dot {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        margin: 0 3px;
+        cursor: pointer;
+    }
+    .active, .dot:hover {
+        border-color: #fa4454;
+    }
+}
+
+/*GAUUUUUUUUCHE*/
+
+.imageagauche {
+    display: flex;
+    min-height: 30vh;
+    align-items: center;
+    background-image: url(backgroundagent.webp);
+}
+.imgmapleft {
+    max-width: 50%;
+    border: 3px solid #cce0de;
+    margin-right: 15px;
+    align-items: center;
+}
+.textdemapgauche {
+    color: #fff;
+}
+.textdemapgauche h2 {
+    font-size: 100px;
+    font-family: 'Policevalo';
+    margin-right: 100px;
+}
+.textdemapgauche p{
+    font-size: 24px;
+}
+@media screen and (max-width: 900px) {
+    .imageagauche {
+        flex-direction: column-reverse; /* Inverser l'ordre des éléments sur les petits écrans */
+        align-items: flex-start; /* Aligner le texte à gauche */
+    }
+
+    .imgmapleft {
+        max-width: 100%;
+        border: 3px solid #cce0de;
+        margin-right: 0;
+    }
+
+    .textdemapgauche h2 {
+        font-size: 30px;
+        font-family: 'Policevalo';
+    }
+
+    .textdemapgauche p {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1280px) {
+
+
+    .textdemapgauche h2 {
+        font-size: 40px;
+        font-family: 'Policevalo';
+    }
+    .textdemapgauche p{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 900px) {
+    .ligneimagemap {
+        display: flex; /* Utilisez flexbox pour aligner verticalement les éléments */
+        align-items: center;
+        margin-left: 5%;
+        width: 90%;
+    }
+}
+
+/*DROIIIIIIIITE*/
+
+
+.imageadroite {
+    display: flex;
+    min-height: 30vh;
+    align-items: center;
+    background-image: url(backgroundagent.webp);
+}
+.imgmapdroite {
+    max-width: 50%;
+    border: 3px solid #cce0de;
+    margin-left: 15px;
+    align-items: center;
+}
+.textdemapdroite {
+    text-align: right;
+    color: #fff;
+}
+.textdemapdroite h2 {
+    text-align: right;
+    font-size: 100px;
+    font-family: 'Policevalo';
+    margin-left: 100px;
+}
+.textdemapdroite p{
+    font-size: 24px;
+}
+
+@media screen and (min-width: 900px) {
+    .ligneimagemapdroite {
+        display: flex; /* Utilisez flexbox pour aligner verticalement les éléments */
+        align-items: center;
+        margin-left: 5%;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .ligneimagemapdroite {
+        flex-direction: column-reverse; /* Inverser l'ordre des éléments sur les petits écrans */
+        align-items: flex-start; /* Aligner le texte à gauche */
+    }
+
+    .imgmapdroite {
+        max-width: 100%;
+        border: 3px solid #cce0de;
+        margin-left: 0;
+    }
+    .textdemapdroite h2 {
+        font-size: 30px;
+        font-family: 'Policevalo';
+        margin-left: 0; /* Supprimez la marge à gauche pour que le texte se rapproche de l'image */
+    }
+
+    .textdemapdroite p {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .textdemapdroite h2 {
+        font-size: 40px;
+        font-family: 'Policevalo';
+    }
+    .textdemapdroite p{
+        font-size: 20px;
+    }
+}

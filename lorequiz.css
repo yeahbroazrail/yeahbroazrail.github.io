@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:'Policevalo';
+    src: url('Valorant\ Font.ttf') format('truetype');
+}
+@font-face {
+    font-family:'Impact';
+    src: url('Impact.ttf') format('truetype');
+}
+
+body {
+    background-color: #30383f;
+}
+
+header {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar {
+    position: absolute;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Policevalo';
+    background-color: #fa4454;
+
+}
+.navbar .logodevalo{
+    height: 60px;
+}
+.navbar a {
+    color: black;
+    font-size: 24px;
+}
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+.navbar .nav-links ul {
+    display: flex;
+}
+.navbar .nav-links ul li{
+    margin: 0 20px;
+}
+.navbar .menu-hamburger {
+    display: none;
+    margin-right: 20px;
+    height: 40px;
+}
+@media screen and (max-width: 768px) {
+    .navbar .menu-hamburger {
+        display: block;
+        z-index: 3;
+    }
+    .navbar {
+        padding: 0;
+    }
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: #30383f3f;
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5 ease ;
+    }
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+    .navbar .nav-links ul li {
+        margin: 20px 0;
+        font-size: 1.3em;
+    }
+}
+.enteter {
+    height: 50px;
+    width: 100%;
+    background-color: #fa4454;
+}
+.enteter {
+    height: 200px;
+    width: 100%;
+    background-color: #fa445300;
+}
+#quiz-container {
+    width: 80%;
+    text-align: center;
+    background-color: #30383f;
+    border: 5px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Ajoutez cette ligne pour centrer horizontalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+h1 {
+    color: white;
+    font-size: 24px;
+    font-family: 'Policevalo';
+}
+.option {
+    display: block;
+    width: 40vw;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: 'Impact';
+    background-color: #fa4454;   
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.option:hover {
+    color: #fff;
+    transform: scale(1.03);
+}
+
+#next-button {
+    display: none;
+    padding: 10px 20px;
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+#refresh-button {
+    width: 30%; /* Largeur de 200px pour le bouton */
+    height: 40px;
+    font-size: 20px;
+    border: 2px solid red; /* Bordure rouge */
+    font-family: 'Policevalo';
+    color: whitesmoke;
+    background-color: #30383f;
+}
+
+#refresh-button:hover {
+    border: 2px solid rgb(255, 255, 255); /* Bordure rouge */
+    color: whitesmoke;
+    background-color: #fa4454;
+}
+@media screen and (max-width: 900px) {
+    #refresh-button {
+        width: 80%; 
+        font-size: 18px;
+    }
+}
